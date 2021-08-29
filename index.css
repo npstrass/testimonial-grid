@@ -21,6 +21,10 @@ body {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
   background: #f1f1f1;
 }
 
@@ -34,7 +38,8 @@ body {
   gap: 2rem;
   width: 90%;
   max-width: 1000px;
-  margin: 2rem auto 0;
+  margin: 0 auto;
+  font-size: 0.9rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
@@ -43,7 +48,7 @@ body {
   padding: 2rem;
   box-sizing: border-box;
   text-align: left;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 18px;
 }
 
@@ -83,7 +88,7 @@ body {
   display: flex;
   align-items: center;
   text-align: left;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .head img {
@@ -127,6 +132,19 @@ body {
   color: var(--blue-dark-gray);
 }
 
+.name,
+.title {
+  font-size: 0.85rem;
+}
+
+.name {
+  margin-bottom: .25rem;
+}
+
+.title {
+  opacity: .5;
+}
+
 strong {
   font-weight: bold;
   font-size: 1.5rem;
@@ -134,5 +152,18 @@ strong {
 }
 
 .quote {
-  margin-top: 1.5rem;
+  opacity: .75;
+  margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+  body {
+    justify-content: flex-start;
+  }
+
+  .gridWrapper {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
 }
